@@ -1,0 +1,107 @@
+/* Box-sizing-model */
+
+ *,
+ *:before,
+ *:after {
+	box-sizing: border-box;
+ }
+
+/* Responsive images */
+
+img {
+	max-width: 100%;
+	height: auto;
+ }
+
+/* Responsive video */
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+.video iframe,  
+.video object,  
+.video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Cursor change on hover on Buttons */
+
+input[type="submit"],
+button {
+	cursor: pointer;
+ }
+
+/* A better looking default horizontal rule */
+
+hr {
+	display: block;
+	height: 0.1em;
+	border: 0;
+	border-top: 0.1em solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+ }
+
+/* Allow only vertical resizing of textareas */
+
+ textarea {
+	resize: vertical;
+ }
+
+/* Browser Upgrade Prompt */
+
+.old-ie-warning {
+	margin: 0.5em;
+	padding: 2em 1em;
+	background-color: #ed1f46;
+	color: #fff;
+	.browser-upgrade {
+		display: inline;
+
+		&__link {
+			color: #fff;
+			font-weight: 800;
+			transition: all 0.5s ease-out;
+
+			&:hover {
+				color: rgb(46, 47, 148);
+			}
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul { 
+	padding: 0; 
+	margin: 0; 
+	list-style: none;
+}

@@ -1,0 +1,9 @@
+/* FONTS */
+
+/* CenturyGothic */
+
+@mixin CenturyGothic ($font-family: 'Century Gothic', $font-weight: 700, $font-style: normal) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
