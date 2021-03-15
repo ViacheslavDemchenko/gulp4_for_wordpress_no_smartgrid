@@ -16,6 +16,7 @@ const gulp = require('gulp'),
     imgmin = require('gulp-tinypng-nokey'),
     svgSprite = require('gulp-svg-sprite'),
     svgmin = require('gulp-svgmin'),
+    newer = require('gulp-newer'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
     browserSync = require('browser-sync').create(),
@@ -166,8 +167,12 @@ gulp.task('jsPlugins', () => {
 gulp.task('imgmin', () => {
     return gulp.src(paths.images.src)
         .pipe(plumber())
-        // .pipe(imgmin())
+        .pipe(newer(paths.images.dest))
+        .pipe(imgmin())
         .pipe(gulp.dest(paths.images.dest))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 /* IMAGES JPG/JPEG & PNG TO WEBP CONVERTATION */
